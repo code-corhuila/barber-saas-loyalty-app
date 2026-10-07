@@ -1,11 +1,11 @@
 const { withNativeFederation, shareAll } = require('@angular-architects/native-federation/config');
 
 module.exports = withNativeFederation({
-  name: 'finance-inventory',
+  name: 'loyalty',
   // An Ionic Angular domain app exposes its routes (ADR-013). The shell lazy-loads them under
-  // /finance, so they run in the shell's injector: its HttpClient, its interceptor, its session.
+  // /loyalty, so they run in the shell's injector: its HttpClient, its interceptor, its session.
   exposes: {
-    './routes': './src/app/finance.routes.ts',
+    './routes': './src/app/loyalty.routes.ts',
   },
   // The same versions as the shell, as singletons: Angular and Ionic exist once in the app.
   shared: {
