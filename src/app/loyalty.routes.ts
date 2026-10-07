@@ -9,4 +9,10 @@ export const routes: Routes = [
   { path: '', pathMatch: 'full', loadComponent: () => import('./loyalty/home.component').then((m) => m.HomeComponent) },
   { path: 'me', title: 'Mi tarjeta', loadComponent: () =>
       import('./loyalty/my-card-page.component').then((m) => m.MyCardPageComponent) },
+  { path: 'cards', title: 'Fidelización', loadComponent: () =>
+      import('./loyalty/cards-page.component').then((m) => m.CardsPageComponent) },
+  { path: 'cards/:id', title: 'Tarjeta', loadComponent: () =>
+      import('./loyalty/card-detail-page.component').then((m) => m.CardDetailPageComponent) },
+  { path: 'config', title: 'Programa', loadComponent: () =>
+      import('./loyalty/config-page.component').then((m) => m.ConfigPageComponent) },
 ];
